@@ -19,7 +19,7 @@ public class AssertionsTest {
 	}
 
 	@Test
-	@DisplayName("(╯°□°）╯︵ ┻━┻")
+	@DisplayName("Guter Test")
 	@Disabled("Geht nicht")
 	public void alwaysFails() {
 		fail("Muss nun");
