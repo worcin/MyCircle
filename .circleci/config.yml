@@ -38,11 +38,11 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
         
       # run tests!
-      - run: mvn package
+      - run: mvn package -o
         
       # uploads the test metadata from the `target/surefire-reports` directory so that it can show up in the CircleCI dashboard. 
       - store_test_results: 
           path: target/surefire-reports
 
       - store_artifacts: # store the artifact
-          path: target/myCircle-*.jar
+          path: target/myCircle-0.0.1-SNAPSHOT.jar
