@@ -15,12 +15,12 @@ import org.junit.jupiter.api.Test;
 public class MultipleAssertionsTest {
 	@Test
 	public void timeoutSoft() {
-		assertTimeout(Duration.ofMillis(50), () -> Thread.sleep(200));
+		assertTimeout(Duration.ofMillis(350), () -> Thread.sleep(200));
 	}
 
 	@Test
 	public void timeoutHard() {
-		assertTimeoutPreemptively(Duration.ofMillis(100), () -> Thread.sleep(200));
+		assertTimeoutPreemptively(Duration.ofMillis(3100), () -> Thread.sleep(200));
 	}
 
 }

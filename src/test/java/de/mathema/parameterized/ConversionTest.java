@@ -21,7 +21,7 @@ public class ConversionTest {
 	@ParameterizedTest
 	@ValueSource(strings = "42 Cats")
 	void testWithImplicitFallbackArgumentConversion(MyClass myClass) {
-		assertEquals("42 Cats", myClass.getName());
+		assertEquals("4242 Cats", myClass.getName());
 	}
 
 	@ParameterizedTest

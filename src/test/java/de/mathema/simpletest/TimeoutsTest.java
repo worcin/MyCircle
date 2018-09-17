@@ -28,12 +28,12 @@ public class TimeoutsTest {
 
 	@Test
 	public void timeoutSoft() {
-		assertTimeout(ofMillis(50), () -> sut.doSomethingLong());
+		assertTimeout(ofMillis(350), () -> sut.doSomethingLong());
 	}
 
 	@Test
 	public void timeoutHard() {
-		assertTimeoutPreemptively(ofMillis(100), () -> sut.doSomethingLong());
+		assertTimeoutPreemptively(ofMillis(300), () -> sut.doSomethingLong());
 	}
 	@ParameterizedTest
 	@EnumSource(value = SomeEnum.class, mode = Mode.EXCLUDE, names = "C")

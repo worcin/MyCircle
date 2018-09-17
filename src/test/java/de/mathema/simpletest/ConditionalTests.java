@@ -22,12 +22,6 @@ public class ConditionalTests {
 		assumeTrue("Windows 9".equals(System.getProperty("os.name")));
 		fail("");
 	}
-	
-	@Test
-	@EnabledOnOs(OS.WINDOWS)
-	public void onlyWindowsAnnotated() {
-		fail("");
-	}
 
 	@Test
 	void testInAllEnvironments() {

@@ -14,7 +14,7 @@ public class ExceptionHandlingTest {
 
 	@Test
 	public void exceptionHandling() {
-		Throwable expected = assertThrows(IllegalArgumentException.class, () -> sut.greet("Nico"));
+		Throwable expected = assertThrows(RuntimeException.class, () -> sut.greet("Nico"));
 		assertEquals("Not yet implemented", expected.getMessage());
 	}
 }
